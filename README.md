@@ -1,2 +1,2 @@
-# EAS_encryption
+# AES_encryption
 AES encryption system in VHDL
