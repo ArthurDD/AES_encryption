@@ -1,0 +1,91 @@
+# vsim LIB_BENCH.AES_tb_conf 
+# Start time: 00:47:37 on Jan 15,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_aes.crypt_pack(body)
+# Loading LIB_BENCH.aes_tb_conf
+# Loading LIB_BENCH.aes_tb(aes_tb_arch)
+# Loading LIB_BENCH.aes(aes_arch)
+# Loading LIB_BENCH.keyexpander_io(keyexpander_io_arch)
+# Loading LIB_BENCH.keyexpander_fsm_moore(keyexpander_fsm_moore_arch)
+# Loading LIB_BENCH.counter(counter_arch)
+# Loading LIB_BENCH.keyexpander(keyexpander_arch)
+# Loading LIB_BENCH.sbox(sbox_arch)
+# Loading LIB_BENCH.register_bit128(register_bit128_arch)
+# Loading LIB_BENCH.fsm_aes(fsm_aes_arch)
+# Loading LIB_BENCH.aesround(aesround_arch)
+# Loading LIB_BENCH.subbytes(subbytes_arch)
+# Loading LIB_BENCH.shiftrow(shiftrow_arch)
+# Loading LIB_BENCH.mixcol(mixcol_arch)
+# Loading LIB_BENCH.addroundkey(addroundkey_arch)
+# Loading LIB_BENCH.register_state(register_state_arch)
+add wave -position insertpoint  \
+sim:/aes_tb/AES0/clock_i \
+sim:/aes_tb/AES0/reset_i \
+sim:/aes_tb/AES0/start_i \
+sim:/aes_tb/AES0/key_i \
+sim:/aes_tb/AES0/data_i \
+sim:/aes_tb/AES0/data_o \
+sim:/aes_tb/AES0/aes_on_o \
+sim:/aes_tb/AES0/resetb_s \
+sim:/aes_tb/AES0/reset_keyexpander_s \
+sim:/aes_tb/AES0/start_keyexpander_s \
+sim:/aes_tb/AES0/counter_aes_s \
+sim:/aes_tb/AES0/reset_counter_aes_s \
+sim:/aes_tb/AES0/enable_counter_aes_s \
+sim:/aes_tb/AES0/data_s \
+sim:/aes_tb/AES0/outputKeyExpander_s \
+sim:/aes_tb/AES0/enableMixcolumns_s \
+sim:/aes_tb/AES0/enableRoundcomputing_s \
+sim:/aes_tb/AES0/enableOutput_s
+add wave -position insertpoint  \
+sim:/aes_tb/AES0/U1/present_state \
+sim:/aes_tb/AES0/U1/next_state
+
+run 500 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(3)/columns(3)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(3)/columns(2)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(3)/columns(1)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(3)/columns(0)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(2)/columns(3)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(2)/columns(2)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(2)/columns(1)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(2)/columns(0)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(1)/columns(3)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(1)/columns(2)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(1)/columns(1)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(1)/columns(0)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(0)/columns(3)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(0)/columns(2)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(0)/columns(1)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U2/Round_SB/rows(0)/columns(0)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U0/Key_exp/for_SB(3)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U0/Key_exp/for_SB(2)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U0/Key_exp/for_SB(1)/label0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/AES0/U0/Key_exp/for_SB(0)/label0
+# End time: 00:49:44 on Jan 15,2021, Elapsed time: 0:02:07
+# Errors: 0, Warnings: 21

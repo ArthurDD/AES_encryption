@@ -1,0 +1,71 @@
+#Effacement des bibliothèques de compilation
+
+rm -rf ./LIB/LIB_RTL
+rm -rf ./LIB/LIB_AES
+rm -rf ./LIB/LIB_BENCH
+
+
+
+#créer à nouveau les bibliothèques
+
+vlib ./LIB/LIB_RTL
+vmap LIB_RTL ./LIB/LIB_RTL
+
+vlib ./LIB/LIB_AES
+vmap LIB_RTL ./LIB/LIB_AES
+
+vlib ./LIB/LIB_BENCH
+vmap LIB_RTL ./LIB/LIB_BENCH
+
+
+
+#Compilation des fichiers VHDL
+
+echo "compile third party library"
+vcom -work LIB_AES ./SRC/THIRDPARTY/CryptPack.vhd
+
+vcom -work LIB_RTL ./SRC/RTL/sbox.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/subbytes.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/shiftrow.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/mixcol.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/addroundkey.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/register_state.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/AESround.vhd
+echo " "
+
+
+vcom -work LIB_RTL ./SRC/RTL/register_bit128.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/Counter.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/keyexpander.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/keyexpander_FSM_Moore.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/keyexpander_IO.vhd
+echo " "
+
+
+vcom -work LIB_RTL ./SRC/RTL/FSM_AES.vhd
+echo " "
+vcom -work LIB_RTL ./SRC/RTL/AES.vhd
+echo " "
+
+
+Compilation des test benches dans lib_bench
+
+echo "vcom -work LIB_BENCH ./SRC/BENCH/AES_tb.vhd"
+vcom -work LIB_BENCH ./SRC/BENCH/AES_tb.vhd
+
+vsim LIB_BENCH.AES_tb_conf &
+
+
+
+
+
